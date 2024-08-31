@@ -12,7 +12,7 @@ class MyOrderViewTests(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, "/usuarios/login/?next=/pedidos/mi-orden")
 
-    def test_logged_user_should_redirect(self): # Cuando el usuario está logueado
+    def test_logged_user_should_redirect(self):  # Cuando el usuario está logueado
         url = reverse("my_order")
         user = get_user_model().objects.create(username="test")
         self.client.force_login(user)

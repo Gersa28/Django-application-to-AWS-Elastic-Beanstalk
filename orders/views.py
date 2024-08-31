@@ -9,7 +9,7 @@ from .forms import OrderProductForm
 class MyOrderView(LoginRequiredMixin, DetailView):
     model = Order
     template_name = "orders/my_order.html"
-    context_object_name = "order" # Sino lo especificamos Django asignará uno automáticamente, con este "order" podremor accederlo desde el Django Template
+    context_object_name = "order"  # Sino lo especificamos Django asignará uno automáticamente, con este "order" podremor accederlo desde el Django Template
 
     # https://ccbv.co.uk/
     def get_object(self, queryset=None):
@@ -23,10 +23,12 @@ class CreateOrderProductView(LoginRequiredMixin, CreateView):
     # success_url = reverse_lazy("my_order")
     success_url = reverse_lazy("list_product")
 
-    def form_valid(self, form): # Si el submit del formulario es válido entonces :
-        order, _ = Order.objects.get_or_create( # Si no encuentra una orden en curso la crea
-            is_active=True,
-            user=self.request.user,
+    def form_valid(self, form):  # Si el submit del formulario es válido entonces :
+        order, _ = (
+            Order.objects.get_or_create(  # Si no encuentra una orden en curso la crea
+                is_active=True,
+                user=self.request.user,
+            )
         )
         form.instance.order = order
         form.instance.quantity = 1

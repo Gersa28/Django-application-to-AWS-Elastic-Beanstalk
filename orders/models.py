@@ -5,7 +5,9 @@ from products.models import Product
 
 
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE) # Si el usuario es eliminado su Orden También
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE
+    )  # Si el usuario es eliminado su Orden También
     is_active = models.BooleanField(default=True)
     order_date = models.DateTimeField(auto_now_add=True)
 

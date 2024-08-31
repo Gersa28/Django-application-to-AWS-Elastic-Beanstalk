@@ -6,7 +6,7 @@ from .models import Product
 
 class ProductListViewTests(TestCase):
 
-    def test_should_return_200(self): # La página carga correctamente?
+    def test_should_return_200(self):  # La página carga correctamente?
         url = reverse("list_product")
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
