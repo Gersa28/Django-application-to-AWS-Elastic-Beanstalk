@@ -279,3 +279,6 @@ pip-selfcheck.json
 
 env
 requirements-dev.txt
+
+*.jpg
+*.png

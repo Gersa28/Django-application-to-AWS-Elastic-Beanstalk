@@ -20,7 +20,8 @@ class MyOrderView(LoginRequiredMixin, DetailView):
 class CreateOrderProductView(LoginRequiredMixin, CreateView):
     template_name = "orders/create_order_product.html"
     form_class = OrderProductForm
-    success_url = reverse_lazy("my_order")
+    # success_url = reverse_lazy("my_order")
+    success_url = reverse_lazy("list_product")
 
     def form_valid(self, form): # Si el submit del formulario es válido entonces :
         order, _ = Order.objects.get_or_create( # Si no encuentra una orden en curso la crea

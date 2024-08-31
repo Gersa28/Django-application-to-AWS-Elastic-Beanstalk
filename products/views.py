@@ -10,7 +10,7 @@ from .serializers import ProductSerializer
 class ProductFormView(generic.FormView):
     form_class = ProductForm    
     template_name = "products/add_product.html"
-    success_url = reverse_lazy("add_product")
+    success_url = reverse_lazy("add_new_product")
 
     def form_valid(self, form): # Recibe el Objeto Formulario y Ejecuta su función save()
         form.save()

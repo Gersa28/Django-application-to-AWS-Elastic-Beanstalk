@@ -22,9 +22,10 @@ from django.conf import settings
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("productos/", include("products.urls")),
+    path("productos/", include("products.urls")),# Nombre de la aplicación y sus URLS
     path("usuarios/", include("users.urls")),
     path("pedidos/", include("orders.urls")),
+
+    path("admin/", admin.site.urls),
     path("", RedirectView.as_view(url="/usuarios/login/", permanent=True)),  # Redirige la raíz a productos
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
