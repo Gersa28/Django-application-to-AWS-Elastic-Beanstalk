@@ -78,4 +78,5 @@ eb init
 eb create coffee-shop-production
 eb satatus
 python manage.py collectstatic
+eb deploy --requirements=requirements.txt
 
