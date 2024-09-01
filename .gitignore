@@ -287,4 +287,5 @@ aws-elastic-beanstalk-cli-setup
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
 comandos_local.txt
