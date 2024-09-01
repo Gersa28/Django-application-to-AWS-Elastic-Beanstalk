@@ -80,3 +80,8 @@ eb satatus
 python manage.py collectstatic
 eb deploy --requirements=requirements.txt
 
+W:
+set DJANGO_DB_URL=postgres://db_username:db_password@db-coffee-shop.cxa22oaewlla.us-east-1.rds.amazonaws.com:5432/postgres
+
+L:
+export DJANGO_DB_URL=postgres://db_username:db_password@db-coffee-shop.cxa22oaewlla.us-east-1.rds.amazonaws.com:5432/postgres
