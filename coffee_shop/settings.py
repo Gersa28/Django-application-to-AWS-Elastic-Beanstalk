@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'env-cafeteria-produccion.eba-hittyffc.us-east-1.elasticbeanstalk.com'    
-]  # PAra que las máquinas de mi red puedan ver la aplicación
+] 
 
 
 # Application definition
