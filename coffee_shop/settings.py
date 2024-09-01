@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-d-%(hs8e)qnplj!40@#@kyoqp9-p0^rjw6c(b8dntb!u$9434e
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'env-cafeteria-produccion.eba-hittyffc.us-east-1.elasticbeanstalk.com'
+    'coffee-shop-production.eba-pphsunww.us-east-1.elasticbeanstalk.com'
     # '127.0.0.1'    
 ] 
 
