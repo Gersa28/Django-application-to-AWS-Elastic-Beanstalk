@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-d-%(hs8e)qnplj!40@#@kyoqp9-p0^rjw6c(b8dntb!u$9434e
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'coffee-shop-production.eba-3hcm8jxr.us-east-1.elasticbeanstalk.com'    
+    'env-cafeteria-produccion.eba-hittyffc.us-east-1.elasticbeanstalk.com'    
 ]  # PAra que las máquinas de mi red puedan ver la aplicación
 
 
