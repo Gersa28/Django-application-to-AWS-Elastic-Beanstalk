@@ -29,7 +29,9 @@ SECRET_KEY = "django-insecure-d-%(hs8e)qnplj!40@#@kyoqp9-p0^rjw6c(b8dntb!u$9434e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []  # PAra que las máquinas de mi red puedan ver la aplicación
+ALLOWED_HOSTS = [
+    'coffee-shop-production.eba-3hcm8jxr.us-east-1.elasticbeanstalk.com'    
+]  # PAra que las máquinas de mi red puedan ver la aplicación
 
 
 # Application definition
